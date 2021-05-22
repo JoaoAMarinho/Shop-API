@@ -6,11 +6,24 @@ const app = express();
 const morgan = require('morgan');
 //Create a parser for received requests
 const bodyParser = require('body-parser');
+//Import mongoose database
+const mongoose = require('mongoose');
 
 //Import route from products
 const productRoutes = require('./api/routes/products');
 //Import route from orders
 const orderRoutes = require('./api/routes/orders');
+
+//Connect database
+mongoose.connect(
+    'mongodb+srv://JoaoAMarinho:' + 
+    process.env.MONGO_ATLAS_PW +
+    '@node-rest-shop.kfs25.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    { 
+        useNewUrlParser: true,
+        useUnifiedTopology: true 
+    }
+);
 
 //Apply morgan to log info in the terminal
 app.use(morgan('dev'));
