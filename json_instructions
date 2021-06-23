@@ -1,0 +1,17 @@
+//Post a product
+{
+    "name": "String",
+    "price": "Number"
+}
+
+//Patch a product
+[
+    {"propName" : "name", "value":  "String"},
+    {"propName" : "price", "value": "Number"}
+]
+
+// Post an order
+{
+    "productID": "String",
+    "quantity":  "Number" //Optional
+}
