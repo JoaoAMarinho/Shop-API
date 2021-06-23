@@ -3,6 +3,7 @@
     "name": "String",
     "price": "Number"
 }
+//Form-data enables to add a productImage as a file
 
 //Patch a product
 [

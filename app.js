@@ -27,7 +27,7 @@ mongoose.connect(
 
 //Apply morgan to log info in the terminal
 app.use(morgan('dev'));
-
+app.use('/uploads',express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
